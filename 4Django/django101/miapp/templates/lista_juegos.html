@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Juegos</title>
+</head>
+
+<body>
+    <h1>Mostrando la Lista de Juegos</h1>
+    <!-- {{lista_juegos}} -->
+
+    <ol>
+        <!-- for que itera en la lista q viene desde el server -->
+        {% for j in lista_juegos %}
+
+        <li>
+            <a href="{% url 'detalle_juego' j.id %}">
+                {{j.titulo}}
+            </a>
+        </li>
+
+
+        {% endfor %}
+    </ol>
+</body>
+
+</html>
